@@ -1,0 +1,27 @@
+from django.urls import path
+from .import views
+urlpatterns=[
+    path('',views.index,name='index'),
+    path('loginpage',views.loginpage,name='loginpage'),
+    path('regpage',views.regpage,name='regpage'),
+    path('reguser',views.reguser,name='reguser'),
+    path('categorypage',views.categorypage,name='categorypage'),
+    path('productpage',views.productpage,name='productpage'),
+    path('productshow',views.productshow,name='productshow'),
+    path('usershow',views.usershow,name='usershow'),
+    path('showcategory/<int:a>',views.showcategory,name='showcategory'),
+    path('cart',views.cart,name='cart'),
+    path('addcart/<int:a>',views.addcart,name='addcart'),
+    path('loginuser',views.loginuser,name='loginuser'),
+    path('addcata',views.addcata,name='addcata'),
+    path('addproduct',views.addproduct,name='addproduct'),
+    path('delete_prod/<int:a>',views.delete_prod,name='delete_prod'),
+    path('delete_cart/<int:a>',views.delete_cart,name='delete_cart'),
+    path('delete_user/<int:a>',views.delete_user,name='delete_user'),
+    path('logout_admin',views.logout_admin,name='logout_admin'),
+    path('userindex',views.userindex,name='userindex'),
+    path('logout_user',views.logout_user,name='logout_user'),
+    path('adminhome',views.adminhome,name='adminhome'),
+    path('userprofile',views.userprofile,name='userprofile'),
+    path('allcategory',views.allcategory,name='allcategory'),
+]
